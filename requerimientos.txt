@@ -1,0 +1,14 @@
+Realizar una API con nodejs, se puede utilizar cualquier framework sin embargo se recomienda utilizar express.
+
+La API debe contener tres endpoints:
+1.- El primer endpoint debe ser un endpoint totalmente abierto y accesible el cual solo debe responder un json
+2.- El segundo endpoint debe estar protegido y solo debe ser accesible a través de token válido, en caso contrario debe retorar el error con su status o code correspondiente
+3.- EL tercer servicio es el que permitirá obtener un token para
+el servicio anterior, este servicio es un "Login", debe solicitar un usuario y contraseña y y validar que estos sean correctos.
+
+Consideraciones
+1.- conexión a la base de datos a través de un ORM, como recomendación se puede utilizar sequelize
+2.- la tabla para los usuarios se debe crear con una migración
+3.- para el token se puede utilizar JWT
+4.- para validar de forma correcta, los servicios se deben presentar en postman, insomnia o alguna herramienta similiar
+5.- la contraseña puede no estar encriptada en la base de datos.
