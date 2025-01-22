@@ -1,3 +1,4 @@
+// Generador por sequeliez cli
 const {
   Model
 } = require('sequelize');

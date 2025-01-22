@@ -10,8 +10,8 @@ const validateAuthentication = (req, res, next) => {
     if (!userDecoded) {
         return next(new AppError('Invalid token', 403));
     }
-    req.user = userDecoded;
-    next()
+    req.user = userDecoded; // Guardamos el usuario decodificado en el request
+    next();
 }
 
 module.exports = {

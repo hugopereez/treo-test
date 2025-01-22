@@ -13,7 +13,7 @@ const getUser = async(username, returnPassword = false) => {
         id: user.id,
         username: user.username,
         name: `${user.firstName} ${user.lastName}`,
-        ...(returnPassword && { password: user.password })
+        ...(returnPassword && { password: user.password }) // Si returnPassword es true, se agrega la propiedad password al objeto
     };
 };
 

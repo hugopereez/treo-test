@@ -5,7 +5,7 @@ const login = async (req, res, next) => {
         const userResponse = await authService.login(req.body);
         return res.json(userResponse);
     } catch (error) {
-        next(error)
+        next(error) // El error se maneja en el middleware errorHandler
     }
 }
 
