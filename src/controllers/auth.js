@@ -1,5 +1,15 @@
-'use strict';
+const authService = require('../services/authService');
 
-export const login = async (req, res) => {
-    return res.send({ message: 'Hello World' });
+const login = async (req, res, next) => {
+    try {
+        const userResponse = await authService.login(req.body);
+        return res.json(userResponse);
+    } catch (error) {
+        next(error)
+    }
 }
+
+module.exports = {
+    login
+}
+

@@ -1,5 +1,14 @@
-'use strict';
+const userService = require('../services/userService');
 
-export const getMe = async (req, res) => {
-    return res.send({ message: 'Hello World' });
+const getMe = async (req, res, next) => {
+    try {
+        const response = await userService.getUser(req.user.username);
+        return res.json(response);
+    } catch (error) {
+        next(error);
+    }
+}
+
+module.exports = {
+    getMe
 }
